@@ -6,7 +6,13 @@
  border: 2px solid;
  position: relative;
  padding: 8px; 
- /* width: 100%; */
+ width: 100%;
+ position: fixed;
+ /* bottom: 0; */
+ bottom: 0;
+ z-index: +1;
+ background-color: aliceblue;
+
 }
 .first-container{
   display: inline-block;
