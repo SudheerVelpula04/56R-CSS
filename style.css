@@ -66,15 +66,25 @@
     background-color: limegreen;
   }
 
-  .nav-conatiner{
+  .nav-container{
     background-color: purple;
     display: flex;
     padding: 15px;
     justify-content: space-around;
   }
+  .nav-item{
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+  }
   .bi{
     font-size: 20px;
     color: white;
     cursor: pointer;
+    transition: 0.8s ease;
+    background-color: blue;
+  }
+  .nav-item:hover>.bi{
+    transform: rotate(30deg) scale(1.2);
   }
  
