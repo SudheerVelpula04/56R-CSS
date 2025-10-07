@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", sans-serif;
+}
+html,body{
+    height: 100%;
+}
+
+.nav-container{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    position: fixed;
+    top: 0px;
+    z-index: +1;
+    
+}
+.item{
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.8s ease;
+}
+.item:hover{
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+}
+.bg-container{
+    width: 100%;
+    height: 74%;
+    background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: grayscale(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.text-container{
+    font-size: 6rem;
+    text-align: center;
+    line-height: 120px;
+    color: white;
+}
+.text-container2{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.4rem;
+}
+.text-container2>p{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.text-container3{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.4rem;
+}
+.text-container3>p{
+    color: white;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.main>.main-container{
+    width: 40%;
+    /* border: 2px solid black; */
+    /* height: 1000px; */
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+}
+.about-container>p{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    letter-spacing: 8px;
+    width: fit-content;
+    margin:50px 0px;
+}
+.para-container>p{
+    text-align: justify;
+    margin: 10px 0px;
+}
+.para-container-2>p{
+    margin: 30px 0px;
+    text-align: justify;
+}
+.Chef-container{
+    margin: 30px 0px ;
+    border-left-color: rgba(0, 0, 0, 0.571);
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding: 10px;
+    background-color: aquamarine;
+}
+.Chef-container>p{
+    margin: 20px 0px;
+}
+.image-container>img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+.open-container,.address-container{
+    margin:20px 0px ;
+}
+.eat-container>h4,p{
+    margin: 20px 0px;
+}
+.Drink-container>h4,p{
+    margin: 20px 0px;
+}
+.eat-container{
+    display: none;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+.Drink-container{
+    display: none;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn-container>label{
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(165, 42, 42, 0.211);
+    color: white;
+}
+.btn-container>label:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#eat,#drink{
+    display: none;
+}
+#eat:checked~.eat-container{
+    display: inline-block;
+}
+#drink:checked~.Drink-container{
+    display: inline-block;
+}
+.image-container-2{
+    margin: 40px 0px;
+    
+}
+.image-container-2>img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+.image-container-3{
+    margin: 10px 0px;
+}
+.image-container-3>img{
+    width: 100%;
+    filter: grayscale(50%);
+
+}
+.para-container-3{
+    margin: 20px 0px;
+}
+.para-container-3>p{
+    text-align: justify;
+    line-height: 20px;
+}
+.para-container-3>p>span{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.form-container{
+    width: 100%;
+
+}
+.form-container>input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+}
+.form-container>input::placeholder{
+    letter-spacing: 5px;
+    color: lightgreen;
+}
+.input-btn>input{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.input-btn>input:hover{
+    background-color: aqua;
+    color: black;
+    border: 0px solid ;
+}
+.footer-container{
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    padding: 60px;
+    background-color: bisque;
+}
