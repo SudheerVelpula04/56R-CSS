@@ -1,143 +1,88 @@
 /*
-units
------
-unit's will specify the container size
+media quarys 
+responsive web deign
+---------------------
+1. box-sizing
+2. meta view-port
+3. relative units
+4. flex
+5. grid
+6. first approach mobile
+7. media (break points)
 
-1. absolute units
-    px,cm,mm,in
+@media screen/all/print and (break point) and (break point){
+    selector{
+      property:value;
+    }
+} 
 
 
-2. relative units
-    em,rem,%,vh,vw,calc()
 
-    em-parent element size
-    rem- root element size - default size - 16px =>1 rem=16px
-    % container size defind 
-    vh-view port height
-    vW-view port width
-    calc()-function ->calc(value opa value)
+
 
 
  */
- /* .parent{
-  width: 50vw;
-  height: 50vh;
-  border: 2px solid red;
+ *{
+  box-sizing: border-box;
  }
- .child{
-  width: 50vw;
-  height: 50vh;
-  background-color: lightgreen;
- } */
-  /* :root{
-    font-size: 20px;
-  } */
-
- /* .parent{
+ body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ }
+ div{
   width: 300px;
-  height: 200px;
-  border: 2px solid purple
+  height: 300px;
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
- .child{
-  width: 1rem; 
-  height: 1rem;
-  background-color: red;
-  font-size: 5rem;
- } */
-  /* .parent{
-  width: 300px;
-  height: 200px;
-  border: 2px solid purple;
-  font-size: 20px;
+ div>p{
+  text-align: center;
+  font-size: 3rem;
+  
  }
- .child{
-  width: 1em; 
-  height: 1em;
-  background-color: red;
- } */
-
- /* .parent{
-  width: calc(100% - 200px);
-  height: 20px;
-  background-color: purple;
- } */
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+ @media screen and (max-width: 400px) {
+  div{
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
- .parent{
-  width: 200px;
-  height: 200px;
-  background-color: purple;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* p::before{
-  content: "Note:";
-  color: blue;
-  font-style: italic;
- }
- p::after{
-  content: "Note this";
-  color: red;
-  font-style: italic;
- } */
-  /* p::before{
-    content: "😃";
-    font-size: xx-large;
-  } */
-
-  p::first-letter{
-    font-size: xx-large;
-    text-transform: lowercase;
-    content: "hello";
+  div>p{
+    font-size: 1rem;
+    display: none;
   }
+ }
+ @media screen and  (min-width: 400px) and (max-width: 500px){
+  div{
+    background-color: red;
+    border: 3px dotted purple;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  div>p{
+    font-size: 2rem;
+  }
+  
+ }
+ @media screen and (min-width: 500px) and (max-width: 700px) {
+    div{
+      background-color: goldenrod;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
 
-/* p::first-line{
-  background-color: yellow;
-  font-size: xx-large;
-  text-transform: uppercase;
-  color: wheat;
-} */
-
-p::selection{
-  color: yellow;
-  background-color: purple;
-  /* text-transform: uppercase; */
-}
-li::before{
-  content: "😆";
-  font-size: xx-large;
-}
-li::after{
-  content: "🙂";
-   font-size: xx-large;
-}
-li::marker{
-  content: "😁";
-   font-size: xx-large;
-}
- 
-
-  /* span{
-    color: blue;
-    font-style: italic;
-  } */
-
+    }
+  
+ }
+ @media screen and (min-width: 700px) {
+  div{
+    background-color: purple;
+  }
+ }
